@@ -1,0 +1,44 @@
+# === Synced from wezterm.lua ===
+
+# Font
+# font_family      FiraMono Nerd Font Propo
+font_size 13.0
+
+# Window
+hide_window_decorations titlebar-only
+tab_bar_style hidden
+window_padding_width 10
+background_opacity 0.85
+background_blur 50
+
+# Cursor
+cursor_shape beam
+cursor_beam_thickness 1.5
+cursor_blink_interval 0.5
+cursor_trail 8
+cursor_trail_decay 0.1 0.15
+
+# Remote control -- lets theme/switch.sh change colors live without
+# opening a new window (local unix socket only).
+allow_remote_control yes
+listen_on unix:/tmp/kitty
+
+# Colors
+include ./theme-active.conf
+
+# Performance
+repaint_delay 8
+sync_to_monitor yes
+
+# Startup size (matching wezterm 2600x1600)
+remember_window_size no
+initial_window_width 2900
+initial_window_height 1850
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="FiraMono Nerd Font Mono"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
